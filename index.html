@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International Wallet</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>International Wallet</div>
+        <span class="pill">Private</span>
+      </div>
+
+      <nav class="nav">
+        <a id="nav_home" href="./index.html">Home</a>
+        <a id="nav_open" href="./open-account.html">Create Account</a>
+        <a id="nav_loans" href="./loans.html">Loans</a>
+        <a id="nav_about" href="./about.html">About</a>
+        <a id="nav_contact" href="./contact.html">Contact</a>
+        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="controls">
+        <select id="langSelect" aria-label="Language">
+          <option value="ko">한국어</option>
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+        <a href="./dashboard.html"><button class="secondary" id="sign_in">Sign in</button></a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="card hero">
+        <h1 class="h1" id="hero_title">International Wallet</h1>
+        <p class="p" id="hero_sub">
+          A private wallet dashboard to track deposits and held (frozen) funds across regions.
+        </p>
+
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label" id="kpi1">Wallets</div>
+            <div class="val" id="kpi1v">1 Primary</div>
+          </div>
+          <div class="kpi">
+            <div class="label" id="kpi2">Regions</div>
+            <div class="val" id="kpi2v">Worldwide</div>
+          </div>
+          <div class="kpi">
+            <div class="label" id="kpi3">Security</div>
+            <div class="val" id="kpi3v">PIN Access</div>
+          </div>
+        </div>
+
+        <div class="notice" id="disclaimer">
+          This is a private wallet/ledger interface for tracking. It does not execute real bank transfers.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3 class="section-title" id="gauge_title">International usage</h3>
+
+        <div class="gauge">
+          <svg viewBox="0 0 200 120" aria-label="International usage gauge">
+            <!-- background arc -->
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="#e5e7eb" stroke-width="18" stroke-linecap="round"></path>
+            <!-- filled arc (dasharray set in JS) -->
+            <path id="gaugeArc" d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="#2563eb" stroke-width="18" stroke-linecap="round"
+                  style="stroke-dasharray: 0 282;"></path>
+            <circle cx="100" cy="100" r="6" fill="#0f172a"></circle>
+          </svg>
+
+          <div class="meta">
+            <div class="big" id="gaugePct">68%</div>
+            <div class="muted" id="gaugeSub">Asia 44% · Europe 18% · Americas 6%</div>
+            <a href="./dashboard.html"><button class="ghost">Open dashboard</button></a>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h3 class="section-title" id="features_title">What you can do</h3>
+        <div class="list">
+          <div class="item"><b id="f1">Deposit tracking</b><span>KRW</span></div>
+          <div class="item"><b id="f2">Frozen funds status</b><span>Hold</span></div>
+          <div class="item"><b id="f3">Masked balance view</b><span>Eye</span></div>
+          <div class="item"><b id="f4">Statements history</b><span>Local</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer">© 2026 International Wallet</div>
+  </div>
+</body>
+</html>
