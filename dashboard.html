@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — International Wallet</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>International Wallet</div>
+      </div>
+
+      <nav class="nav">
+        <a id="nav_home" href="./index.html">Home</a>
+        <a id="nav_open" href="./open-account.html">Create Account</a>
+        <a id="nav_loans" href="./loans.html">Loans</a>
+        <a id="nav_about" href="./about.html">About</a>
+        <a id="nav_contact" href="./contact.html">Contact</a>
+        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="controls">
+        <select id="langSelect" aria-label="Language">
+          <option value="ko">한국어</option>
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <section class="card" style="margin-top:16px" id="loginCard">
+      <h2 class="section-title" id="login_title">Sign in</h2>
+      <form id="loginForm" class="row" autocomplete="off">
+        <div>
+          <label class="small" id="acct_no">Account number</label>
+          <input id="accountNo" placeholder="IW-10030001" />
+        </div>
+        <div>
+          <label class="small" id="pin">PIN</label>
+          <input id="pinInput" placeholder="1234" inputmode="numeric" />
+        </div>
+        <div style="flex:0 0 160px; align-self:end">
+          <button type="submit" id="sign_in" style="width:100%">Sign in</button>
+        </div>
+      </form>
+      <div class="small" id="loginMsg" style="margin-top:10px; color:var(--danger)"></div>
+      <div class="notice">
+        Tip: Set your own account number and PIN on the <a href="./open-account.html"><b>Create Account</b></a> page.
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="card" style="margin-top:16px" id="app">
+      <div class="row" style="align-items:center">
+        <div>
+          <h2 class="section-title" id="dash_title">Dashboard</h2>
+          <div id="statusPill" class="pill red">Frozen</div>
+        </div>
+        <div style="flex:0 0 200px; text-align:right">
+          <button class="ghost" id="freezeBtn">Toggle freeze</button>
+          <button class="secondary" id="logoutBtn" style="margin-left:8px">Log out</button>
+        </div>
+      </div>
+
+      <div class="balance" style="margin-top:10px">
+        <div>
+          <div class="small" id="available">Balance</div>
+          <div class="amt" id="balanceAmt">••••••••••</div>
+          <div class="small" id="held">Held status: Frozen</div>
+        </div>
+        <button class="eye" id="eyeBtn" title="Show/Hide">👁️</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="row">
+        <div class="card" style="box-shadow:none; border:1px solid var(--line)">
+          <h3 class="section-title" id="deposit">Deposit</h3>
+          <form id="depositForm" class="row">
+            <div>
+              <label class="small" id="amount">Amount (KRW)</label>
+              <input id="depAmount" inputmode="numeric" placeholder="1000000" />
+            </div>
+            <div>
+              <label class="small" id="note">Note</label>
+              <input id="depNote" placeholder="e.g., deposit record" />
+            </div>
+            <div style="flex:0 0 180px; align-self:end">
+              <button type="submit" id="add_deposit" style="width:100%">Add deposit</button>
+            </div>
+          </form>
+          <div class="notice">
+            Deposits update your local balance and history.
+          </div>
+        </div>
+
+        <div class="card" style="box-shadow:none; border:1px solid var(--line)">
+          <h3 class="section-title" id="transfer">Transfer</h3>
+          <button id="transferBtn" disabled style="width:100%">Transfer</button>
+          <div class="small" id="transferMsg" style="margin-top:10px; color:var(--danger)">
+            Transfers are blocked while funds are frozen.
+          </div>
+          <div class="notice">
+            Transfer is intentionally disabled (Frozen mode).
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h3 class="section-title">Transaction history</h3>
+      <table class="table">
+        <thead>
+          <tr><th>Date</th><th>Type</th><th>Amount</th><th>Note</th></tr>
+        </thead>
+        <tbody id="txBody"></tbody>
+      </table>
+
+      <div class="notice">
+        This is a private wallet/ledger interface for tracking and does not execute real bank transfers.
+      </div>
+    </section>
+
+    <div class="footer">© 2026 International Wallet</div>
+  </div>
+</body>
+</html>
