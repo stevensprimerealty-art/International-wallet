@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — International Wallet</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><div class="logo"></div><div>International Wallet</div></div>
+      <nav class="nav">
+        <a id="nav_home" href="./index.html">Home</a>
+        <a id="nav_open" href="./open-account.html">Create Account</a>
+        <a id="nav_loans" href="./loans.html">Loans</a>
+        <a id="nav_about" href="./about.html">About</a>
+        <a id="nav_contact" href="./contact.html">Contact</a>
+        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelect" aria-label="Language">
+          <option value="ko">한국어</option>
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h2 class="section-title" id="contact_title">Contact us</h2>
+      <p class="p">Send a message (local-only form display).</p>
+
+      <div class="row" style="margin-top:12px">
+        <div>
+          <label class="small">Full name</label>
+          <input placeholder="Your name" />
+        </div>
+        <div>
+          <label class="small">Email</label>
+          <input placeholder="name@email.com" />
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+        <label class="small">Message</label>
+        <textarea placeholder="Write your message..."></textarea>
+      </div>
+
+      <div style="margin-top:12px">
+        <button type="button" id="send">Send message</button>
+      </div>
+
+      <div class="notice">
+        If you later want real contact delivery, connect this form to an email service (server-side).
+      </div>
+    </section>
+
+    <div class="footer">© 2026 International Wallet</div>
+  </div>
+</body>
+</html>
