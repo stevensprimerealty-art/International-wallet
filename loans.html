@@ -1,26 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loans — International Wallet</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Loans</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
   <script defer src="./assets/app.js"></script>
 </head>
 <body>
+  <div id="loader" class="loader"><div class="spinner"></div></div>
+
   <div class="wrap">
     <div class="topbar">
-      <div class="brand"><div class="logo"></div><div>International Wallet</div></div>
+      <div class="brand"><div class="logo"></div><div data-brand>International Banking of Korea</div></div>
       <nav class="nav">
-        <a id="nav_home" href="./index.html">Home</a>
-        <a id="nav_open" href="./open-account.html">Create Account</a>
-        <a id="nav_loans" href="./loans.html">Loans</a>
-        <a id="nav_about" href="./about.html">About</a>
-        <a id="nav_contact" href="./contact.html">Contact</a>
-        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+        <a href="./index.html" data-i18n="nav_home">Home</a>
+        <a href="./open-account.html" data-i18n="nav_open">Create Account</a>
+        <a href="./cards.html" data-i18n="nav_cards">Cards</a>
+        <a href="./security.html" data-i18n="nav_security">Security</a>
+        <a href="./loans.html" data-i18n="nav_loans">Loans</a>
+        <a href="./about.html" data-i18n="nav_about">About</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./dashboard.html" data-i18n="nav_dash">Dashboard</a>
       </nav>
       <div class="controls">
-        <select id="langSelect" aria-label="Language">
+        <select id="langSelect">
           <option value="ko">한국어</option>
           <option value="en" selected>English</option>
           <option value="es">Español</option>
@@ -28,68 +32,43 @@
       </div>
     </div>
 
-    <section class="card" style="margin-top:16px">
-      <h2 class="section-title" id="loans_title">Loans</h2>
-      <p class="p">
-        Below are loan products and requirements (information-only). Approval depends on eligibility checks.
-      </p>
+    <section class="card fade" style="margin-top:16px">
+      <h2 class="section-title" data-i18n="loans_title">Loan Information</h2>
+      <p class="p" data-i18n="loans_sub">Loan details and requirements.</p>
 
       <div class="hr"></div>
 
-      <h3 class="section-title">Loan products</h3>
       <div class="list">
-        <div class="item">
-          <div>
-            <b>Personal Loan (KRW)</b>
-            <div class="small">Term: 6–36 months · Indicative APR: 8%–19%</div>
+        <div class="item fade">
+          <h4>Personal Loan (KRW)</h4>
+          <div class="meta">
+            • Term: 6–36 months<br/>
+            • Indicative range: 8%–19% APR (display)<br/>
+            • Requirements: ID, income proof, address proof, assessment
           </div>
-          <span>Up to ₩50,000,000</span>
         </div>
 
-        <div class="item">
-          <div>
-            <b>Business Support Loan</b>
-            <div class="small">Term: 12–60 months · Indicative APR: 10%–22%</div>
+        <div class="item fade">
+          <h4>Business Support Loan</h4>
+          <div class="meta">
+            • Term: 12–60 months<br/>
+            • Documents: registration, invoices, bank statements<br/>
+            • Assessment: cash-flow + history
           </div>
-          <span>Up to ₩200,000,000</span>
         </div>
 
-        <div class="item">
-          <div>
-            <b>Secured Loan (Collateral)</b>
-            <div class="small">Term: 12–84 months · Indicative APR: 6%–14%</div>
+        <div class="item fade">
+          <h4>Secured Loan</h4>
+          <div class="meta">
+            • Collateral-based UI<br/>
+            • Valuation + risk check section<br/>
+            • Lower indicative rate band (display)
           </div>
-          <span>Based on collateral</span>
         </div>
-      </div>
-
-      <div class="hr"></div>
-
-      <h3 class="section-title">Requirements</h3>
-      <div class="list">
-        <div class="item"><b>Identity verification</b><span>Government ID</span></div>
-        <div class="item"><b>Proof of address</b><span>Utility bill / statement</span></div>
-        <div class="item"><b>Income verification</b><span>Payslips / bank statement</span></div>
-        <div class="item"><b>Credit assessment</b><span>Score + history</span></div>
-        <div class="item"><b>Purpose</b><span>Reason for loan</span></div>
-      </div>
-
-      <div class="hr"></div>
-
-      <h3 class="section-title">Documents checklist</h3>
-      <div class="list">
-        <div class="item"><b>Valid ID</b><span>Passport / national ID</span></div>
-        <div class="item"><b>Address proof</b><span>Last 3 months</span></div>
-        <div class="item"><b>Income proof</b><span>3–6 months</span></div>
-        <div class="item"><b>Business docs (if business loan)</b><span>Registration + invoices</span></div>
-      </div>
-
-      <div class="notice">
-        This page is informational. It does not issue credit automatically and does not represent a bank lending decision.
       </div>
     </section>
 
-    <div class="footer">© 2026 International Wallet</div>
+    <div class="footer">© International Banking of Korea</div>
   </div>
 </body>
 </html>
