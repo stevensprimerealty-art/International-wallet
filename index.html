@@ -1,28 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>International Wallet</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>International Banking of Korea</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
   <script defer src="./assets/app.js"></script>
 </head>
 <body>
+  <div id="loader" class="loader"><div class="spinner"></div></div>
+
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
         <div class="logo"></div>
-        <div>International Wallet</div>
-        <span class="pill">Private</span>
+        <div data-brand>International Banking of Korea</div>
       </div>
 
       <nav class="nav">
-        <a id="nav_home" href="./index.html">Home</a>
-        <a id="nav_open" href="./open-account.html">Create Account</a>
-        <a id="nav_loans" href="./loans.html">Loans</a>
-        <a id="nav_about" href="./about.html">About</a>
-        <a id="nav_contact" href="./contact.html">Contact</a>
-        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+        <a href="./index.html" data-i18n="nav_home">Home</a>
+        <a href="./open-account.html" data-i18n="nav_open">Create Account</a>
+        <a href="./cards.html" data-i18n="nav_cards">Cards</a>
+        <a href="./security.html" data-i18n="nav_security">Security</a>
+        <a href="./loans.html" data-i18n="nav_loans">Loans</a>
+        <a href="./about.html" data-i18n="nav_about">About</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./dashboard.html" data-i18n="nav_dash">Dashboard</a>
       </nav>
 
       <div class="controls">
@@ -31,70 +34,70 @@
           <option value="en" selected>English</option>
           <option value="es">Español</option>
         </select>
-        <a href="./dashboard.html"><button class="secondary" id="sign_in">Sign in</button></a>
+        <a href="./dashboard.html"><button class="secondary" data-i18n="sign_in">Sign in</button></a>
       </div>
     </div>
 
-    <div class="grid">
-      <section class="card hero">
-        <h1 class="h1" id="hero_title">International Wallet</h1>
-        <p class="p" id="hero_sub">
-          A private wallet dashboard to track deposits and held (frozen) funds across regions.
-        </p>
+    <section class="card hero fade" style="margin-top:16px">
+      <div class="hero-overlay">
+        <h1 class="h1" data-i18n="hero_title">Worldwide Wallet Platform</h1>
+        <p class="p" data-i18n="hero_sub">Professional interface for multi-currency viewing, deposits, and account access.</p>
 
         <div class="kpis">
           <div class="kpi">
-            <div class="label" id="kpi1">Wallets</div>
-            <div class="val" id="kpi1v">1 Primary</div>
+            <div class="label" data-i18n="kpi1">Main currency</div>
+            <div class="val" data-i18n="kpi1v">KRW</div>
           </div>
           <div class="kpi">
-            <div class="label" id="kpi2">Regions</div>
-            <div class="val" id="kpi2v">Worldwide</div>
+            <div class="label" data-i18n="kpi2">Access</div>
+            <div class="val" data-i18n="kpi2v">Account + PIN</div>
           </div>
           <div class="kpi">
-            <div class="label" id="kpi3">Security</div>
-            <div class="val" id="kpi3v">PIN Access</div>
+            <div class="label" data-i18n="kpi3">Coverage</div>
+            <div class="val" data-i18n="kpi3v">Worldwide</div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="notice" id="disclaimer">
-          This is a private wallet/ledger interface for tracking. It does not execute real bank transfers.
-        </div>
+    <!-- Images that fade in -->
+    <div class="grid" style="margin-top:16px">
+      <section class="card fade">
+        <h2 class="section-title">Interface Preview</h2>
+        <p class="p">Add your own images inside /assets and link them here.</p>
+        <div class="hr"></div>
+        <img class="fade" src="./assets/hero.jpg" alt="Preview" style="width:100%; border-radius:16px; border:1px solid var(--line)"/>
       </section>
 
-      <aside class="card">
-        <h3 class="section-title" id="gauge_title">International usage</h3>
-
-        <div class="gauge">
-          <svg viewBox="0 0 200 120" aria-label="International usage gauge">
-            <!-- background arc -->
-            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="#e5e7eb" stroke-width="18" stroke-linecap="round"></path>
-            <!-- filled arc (dasharray set in JS) -->
-            <path id="gaugeArc" d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="#2563eb" stroke-width="18" stroke-linecap="round"
-                  style="stroke-dasharray: 0 282;"></path>
-            <circle cx="100" cy="100" r="6" fill="#0f172a"></circle>
-          </svg>
-
-          <div class="meta">
-            <div class="big" id="gaugePct">68%</div>
-            <div class="muted" id="gaugeSub">Asia 44% · Europe 18% · Americas 6%</div>
-            <a href="./dashboard.html"><button class="ghost">Open dashboard</button></a>
+      <aside class="card fade">
+        <h2 class="section-title" data-i18n="popularity_title">Growth in popularity</h2>
+        <div class="counter-box" style="margin-top:10px">
+          <div>
+            <div class="counter-num" id="popCounter">0</div>
+            <div class="counter-sub" data-i18n="population_use">Population use</div>
           </div>
+          <div class="small">1 → 1000</div>
         </div>
 
         <div class="hr"></div>
-
-        <h3 class="section-title" id="features_title">What you can do</h3>
         <div class="list">
-          <div class="item"><b id="f1">Deposit tracking</b><span>KRW</span></div>
-          <div class="item"><b id="f2">Frozen funds status</b><span>Hold</span></div>
-          <div class="item"><b id="f3">Masked balance view</b><span>Eye</span></div>
-          <div class="item"><b id="f4">Statements history</b><span>Local</span></div>
+          <div class="item">
+            <h4>Multi-currency view</h4>
+            <div class="meta">KRW / EUR / USD / GBP switching on dashboard.</div>
+          </div>
+          <div class="item">
+            <h4>Clean professional UI</h4>
+            <div class="meta">Glass white design + green brand theme.</div>
+          </div>
+          <div class="item">
+            <h4>Security access</h4>
+            <div class="meta">Account number + PIN sign-in.</div>
+          </div>
         </div>
       </aside>
     </div>
 
-    <div class="footer">© 2026 International Wallet</div>
+    <div class="footer">© International Banking of Korea</div>
   </div>
 </body>
 </html>
