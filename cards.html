@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cards</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div id="loader" class="loader"><div class="spinner"></div></div>
+
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><div class="logo"></div><div data-brand>International Banking of Korea</div></div>
+      <nav class="nav">
+        <a href="./index.html" data-i18n="nav_home">Home</a>
+        <a href="./open-account.html" data-i18n="nav_open">Create Account</a>
+        <a href="./cards.html" data-i18n="nav_cards">Cards</a>
+        <a href="./security.html" data-i18n="nav_security">Security</a>
+        <a href="./loans.html" data-i18n="nav_loans">Loans</a>
+        <a href="./about.html" data-i18n="nav_about">About</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./dashboard.html" data-i18n="nav_dash">Dashboard</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelect">
+          <option value="ko">한국어</option>
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="card fade" style="margin-top:16px">
+      <h2 class="section-title" data-i18n="cards_title">Cards</h2>
+      <p class="p">Plain cards with typical Korea-use specifications (info layout).</p>
+
+      <div class="hr"></div>
+
+      <div class="list">
+        <div class="item fade">
+          <h4>Domestic Debit (체크카드)</h4>
+          <div class="meta">
+            • KRW primary settlement<br/>
+            • ATM withdrawals (domestic networks)<br/>
+            • In-store / online payments (domestic)<br/>
+            • Daily/Monthly limits configurable
+          </div>
+        </div>
+
+        <div class="item fade">
+          <h4>Domestic Credit (신용카드)</h4>
+          <div class="meta">
+            • Billing cycle + statement tracking<br/>
+            • Installments (할부) option UI<br/>
+            • Merchant category summaries<br/>
+            • Spending alerts + controls
+          </div>
+        </div>
+
+        <div class="item fade">
+          <h4>Transit-Ready (교통 기능)</h4>
+          <div class="meta">
+            • T-money / Cashbee style usage section (UI)<br/>
+            • Tap-to-pay status and top-up history<br/>
+            • Separate transit spending category
+          </div>
+        </div>
+
+        <div class="item fade">
+          <h4>International Card (해외 결제)</h4>
+          <div class="meta">
+            • FX view: KRW / USD / EUR / GBP<br/>
+            • Travel mode toggle (UI)<br/>
+            • Security checks: location / device / OTP section
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© International Banking of Korea</div>
+  </div>
+</body>
+</html>
