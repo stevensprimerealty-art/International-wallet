@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Security</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div id="loader" class="loader"><div class="spinner"></div></div>
+
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><div class="logo"></div><div data-brand>International Banking of Korea</div></div>
+      <nav class="nav">
+        <a href="./index.html" data-i18n="nav_home">Home</a>
+        <a href="./open-account.html" data-i18n="nav_open">Create Account</a>
+        <a href="./cards.html" data-i18n="nav_cards">Cards</a>
+        <a href="./security.html" data-i18n="nav_security">Security</a>
+        <a href="./loans.html" data-i18n="nav_loans">Loans</a>
+        <a href="./about.html" data-i18n="nav_about">About</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./dashboard.html" data-i18n="nav_dash">Dashboard</a>
+      </nav>
+      <div class="controls">
+        <select id="langSelect">
+          <option value="ko">한국어</option>
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="card fade" style="margin-top:16px">
+      <h2 class="section-title" data-i18n="security_title">Security</h2>
+      <div class="hr"></div>
+
+      <div class="list">
+        <div class="item fade">
+          <h4>Account + PIN</h4>
+          <div class="meta">Secure access with account number and PIN sign-in UI.</div>
+        </div>
+        <div class="item fade">
+          <h4>Masked Balance</h4>
+          <div class="meta">Mask/unmask control for privacy in public spaces.</div>
+        </div>
+        <div class="item fade">
+          <h4>Session Control</h4>
+          <div class="meta">Logout clears the session and returns to home.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© International Banking of Korea</div>
+  </div>
+</body>
+</html>
