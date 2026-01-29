@@ -1,26 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — International Wallet</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
   <script defer src="./assets/app.js"></script>
 </head>
 <body>
+  <div id="loader" class="loader"><div class="spinner"></div></div>
+
   <div class="wrap">
     <div class="topbar">
-      <div class="brand"><div class="logo"></div><div>International Wallet</div></div>
+      <div class="brand"><div class="logo"></div><div data-brand>International Banking of Korea</div></div>
       <nav class="nav">
-        <a id="nav_home" href="./index.html">Home</a>
-        <a id="nav_open" href="./open-account.html">Create Account</a>
-        <a id="nav_loans" href="./loans.html">Loans</a>
-        <a id="nav_about" href="./about.html">About</a>
-        <a id="nav_contact" href="./contact.html">Contact</a>
-        <a id="nav_dash" href="./dashboard.html">Dashboard</a>
+        <a href="./index.html" data-i18n="nav_home">Home</a>
+        <a href="./open-account.html" data-i18n="nav_open">Create Account</a>
+        <a href="./cards.html" data-i18n="nav_cards">Cards</a>
+        <a href="./security.html" data-i18n="nav_security">Security</a>
+        <a href="./loans.html" data-i18n="nav_loans">Loans</a>
+        <a href="./about.html" data-i18n="nav_about">About</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./dashboard.html" data-i18n="nav_dash">Dashboard</a>
       </nav>
       <div class="controls">
-        <select id="langSelect" aria-label="Language">
+        <select id="langSelect">
           <option value="ko">한국어</option>
           <option value="en" selected>English</option>
           <option value="es">Español</option>
@@ -28,35 +32,31 @@
       </div>
     </div>
 
-    <section class="card" style="margin-top:16px">
-      <h2 class="section-title" id="about_title">About us</h2>
-      <p class="p">
-        International Wallet is a private wallet interface for tracking balances, deposits, and frozen funds across regions.
-        It focuses on clarity, privacy, and a clean experience.
+    <section class="card fade" style="margin-top:16px">
+      <h2 class="section-title" data-i18n="about_title">About us</h2>
+      <p class="p" data-i18n="about_sub">
+        In existence since 2015. Built for a clean, professional experience.
       </p>
 
       <div class="hr"></div>
 
-      <h3 class="section-title">Worldwide usage (concept)</h3>
-      <p class="p">
-        The “international usage” gauge represents how your wallet activity is distributed by region (customizable).
-      </p>
-
-      <div class="hr"></div>
-
-      <h3 class="section-title">Security</h3>
       <div class="list">
-        <div class="item"><b>PIN sign-in</b><span>Local access</span></div>
-        <div class="item"><b>Masked balance</b><span>Eye toggle</span></div>
-        <div class="item"><b>Frozen funds</b><span>Transfer disabled</span></div>
-      </div>
-
-      <div class="notice">
-        This is a private wallet/ledger interface for tracking. It does not execute real bank transfers.
+        <div class="item fade">
+          <h4>Mission</h4>
+          <div class="meta">Provide a professional interface for viewing balances and activity with clean design.</div>
+        </div>
+        <div class="item fade">
+          <h4>Worldwide</h4>
+          <div class="meta">Multi-currency viewing and global-ready layout.</div>
+        </div>
+        <div class="item fade">
+          <h4>Design</h4>
+          <div class="meta">Green header + glass white background + bold professional typography.</div>
+        </div>
       </div>
     </section>
 
-    <div class="footer">© 2026 International Wallet</div>
+    <div class="footer">© International Banking of Korea</div>
   </div>
 </body>
 </html>
